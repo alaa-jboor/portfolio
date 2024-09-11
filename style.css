@@ -1,0 +1,319 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #E3F2FD; /* Light baby blue background color */
+    color: #000; /* Dark text color for contrast */
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(45deg, #003366, #003366, #003366); /* Dark navy gradient */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    z-index: 100;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+.header.hidden {
+    opacity: 0; /* Hide the header */
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.logo {
+    font-size: 24px;
+    color: #E3F2FD; /* Light baby blue for logo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #E3F2FD; /* Light baby blue for links */
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #89CFF0; /* Medium baby blue on hover */
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+.home-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #003366; /* Dark navy color */
+}
+
+.home-content h3 {
+    font-size: 28px;
+    color: #003366; /* Dark navy color */
+    margin-bottom: 40px;
+}
+
+/* Download CV Button */
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #003366; /* Dark navy color */
+    border-radius: 40px;
+    font-size: 16px;
+    color: #E3F2FD; /* Light baby blue text color */
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-box:hover {
+    background-color: #001a33; /* Even darker navy on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        height: 50px;
+        padding: 0 5%;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .home-content h2 {
+        font-size: 36px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .btn-box {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Contact Page Styles */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 60px 10%;
+    background-color: #E3F2FD; /* Light baby blue background color */
+    color: #000; /* Dark text color for contrast */
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #003366; /* Dark navy color */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between contact items */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    background-color: #003366; /* Dark navy background for contact items */
+    color: #E3F2FD; /* Light baby blue text color */
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    max-width: 400px; /* Limit the maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.contact-item span {
+    font-size: 18px;
+}
+
+.contact-item:hover {
+    background-color: #001a33; /* Even darker navy on hover */
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it takes the full viewport height */
+    background-color: #E3F2FD; /* Light blue background color */
+}
+
+.projects-content {
+    display: inline-block;
+    max-width: 800px;
+    width: 100%;
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #003366; /* Dark navy color */
+}
+
+.project {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)); /* Light background */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #003366; /* Dark navy color */
+}
+
+.project p {
+    font-size: 16px;
+    color: #003366; /* Dark navy color */
+    margin-bottom: 20px;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #003366; /* Dark navy color */
+    border-radius: 40px;
+    font-size: 16px;
+    color: #E3F2FD; /* Light baby blue text color */
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-box:hover {
+    background-color: #001a33; /* Even darker navy on hover */
+    color: #fff; /* White text color on hover */
+}
+
+/* Tools Section */
+.tools-section {
+    background: #B3E5FC; /* Light blue background for tools section */
+    border-radius: 8px;
+    padding: 40px 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.tools-section h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #003366; /* Dark navy color for heading */
+}
+
+.toggle-btn {
+    background: #003366; /* Dark navy background */
+    border: none;
+    border-radius: 8px;
+    color: #E3F2FD; /* Light baby blue text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.toggle-btn:hover {
+    background-color: #001a33; /* Even darker navy on hover */
+}
+
+.tools-content {
+    display: none; /* Initially hide the tools content */
+    margin-top: 20px;
+}
+
+.tool {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)); /* Light background */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align text to the left */
+}
+
+.tool:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.tool h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #003366; /* Dark navy color */
+}
+
+.tool p {
+    font-size: 16px;
+    color: #003366; /* Dark navy color */
+}
+
+/* Footer Styles */
+.footer {
+    color: #000; /* Dark text color for contrast */
+    position: fixed; /* Fix the position */
+    bottom: 0; /* Align at the bottom of the page */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Place above other elements */
+    background-color: #B3E5FC; /* Light blue background */
+    text-align: center; /* Center align footer text */
+    padding: 10px 0; /* Add padding */
+}
+
+.footer p {
+    margin: 0; /* Remove default margins */
+    font-size: 14px; /* Slightly larger font size for readability */
+}
